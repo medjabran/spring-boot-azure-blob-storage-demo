@@ -1,0 +1,20 @@
+# Use
+spring:
+  cloud:
+    azure:
+      storage:
+        blob:
+          endpoint: ${AZURE_STORAGE_ACCOUNT_ENDPOINT:http://127.0.0.1:10000/devstoreaccount1}
+          account-name: ${AZURE_STORAGE_ACCOUNT_NAME:devstoreaccount1}
+          account-key: ${AZURE_STORAGE_ACCOUNT_KEY:Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==}
+          enabled: true
+          # blob-name: ${AZURE_STORAGE_ACCOUNT_BLOB_NAME:$root} -- static blob name
+
+blob-name:
+  batch: ${AZURE_STORAGE_ACCOUNT_BLOB_NAME:$root}
+
+# Use : com.azure:azure-storage-blob
+#azure:
+#  storage:
+#    connection-string: ${AZURE_STORAGE_CONNECTION_STRING}
+#    container-name: ${AZURE_STORAGE_CONTAINER_NAME}
